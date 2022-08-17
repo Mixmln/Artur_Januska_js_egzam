@@ -26,11 +26,21 @@ async function getUsers(url) {
   }
 }
 
+function randomColor() {
+  const r = Math.ceil(Math.random() * 255);
+  const g = Math.ceil(Math.random() * 255);
+  const b = Math.ceil(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 function showUsersHtml(arr) {
   outputEl.innerHTML = "";
+  outputEl.classList.remove("bgc-white");
+  btnEl.textContent = "Change colors";
   arr.map((obj) => {
     const divEl = document.createElement("div");
     divEl.className = "user-info";
+    divEl.style.background = randomColor();
     divEl.innerHTML = `
         
         <img src=${obj.avatar_url} alt="userImg" />

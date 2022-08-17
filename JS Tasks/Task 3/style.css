@@ -56,7 +56,8 @@
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #fff;
+}
+.bgc-white {
 }
 
 /* desctop resp */
@@ -86,9 +87,10 @@
   font-style: normal;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .user-info {
     flex-direction: column;
+    background-color: #fff;
   }
   .user-info p {
     font-size: 30px;

@@ -21,23 +21,32 @@ formEl.addEventListener("submit", (e) => {
   const gramai = kgToG(iValue);
   const uncijos = kgToOz(iValue);
   outputEl.innerHTML = `
-  <p>${iValue} Kg = ${svarai} Lb</p>
-  <p>${iValue} Kg = ${gramai} g</p>
-  <p>${iValue} Kg = ${uncijos} Oz</p>
+  <p>${iValue} Kg = ${svarai}</p>
+  <p>${iValue} Kg = ${gramai}</p>
+  <p>${iValue} Kg = ${uncijos}</p>
   `;
 });
 
 function kgToLb(kg) {
+  if (kg < 0) {
+    return "Number should be greater then 0";
+  }
   const lb = kg * 2.2046;
-  return +lb;
+  return `${lb} lb`;
 }
 
 function kgToG(kg) {
+  if (kg < 0) {
+    return "Number should be greater then 0";
+  }
   const g = kg / 0.001;
-  return g;
+  return `${g} g`;
 }
 
 function kgToOz(kg) {
+  if (kg < 0) {
+    return "Number should be greater then 0";
+  }
   const oz = kg * 35.274;
-  return oz;
+  return `${oz} oz`;
 }
