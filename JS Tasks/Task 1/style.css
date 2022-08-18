@@ -52,11 +52,19 @@ form {
 }
 
 #output {
-  width: 70%;
+  width: 35%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 20px;
+}
+
+.output-bg {
+  transition: 1s;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  box-shadow: 4px 3px 5px 0px #787878;
 }
 
 #output p {

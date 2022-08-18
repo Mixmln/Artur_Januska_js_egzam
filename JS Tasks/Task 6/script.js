@@ -25,7 +25,6 @@ const users = [
 function getUserAverageAge(arr) {
   const agesArr = arr.map((obj) => obj.age);
   return +agesArr.reduce((a, b) => a + b) / agesArr.length;
-  // return +average.toFixed();
 }
 
 const avgAge = getUserAverageAge(users);

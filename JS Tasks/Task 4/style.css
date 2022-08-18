@@ -45,9 +45,6 @@ li {
   margin-bottom: 2px;
 }
 
-.column {
-  width: 300px;
-}
 #output {
   width: 1000px;
   display: flex;
@@ -65,4 +62,15 @@ li {
   height: 300px;
   overflow: auto;
   position: relative;
+}
+
+@media screen and (max-width: 769px) {
+  #output {
+    width: initial;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
 }

@@ -20,6 +20,7 @@ formEl.addEventListener("submit", (e) => {
   const svarai = kgToLb(iValue);
   const gramai = kgToG(iValue);
   const uncijos = kgToOz(iValue);
+  outputEl.classList.add("output-bg");
   outputEl.innerHTML = `
   <p>${iValue} Kg = ${svarai}</p>
   <p>${iValue} Kg = ${gramai}</p>
